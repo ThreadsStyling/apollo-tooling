@@ -21,7 +21,7 @@ $ npm install -g @threads/apollo
 $ apollo COMMAND
 running command...
 $ apollo (-v|--version|version)
-@threads/apollo/2.10.4 darwin-x64 node-v10.15.3
+@threads/apollo/2.10.5 darwin-x64 node-v10.15.3
 $ apollo --help [COMMAND]
 USAGE
   $ apollo COMMAND
