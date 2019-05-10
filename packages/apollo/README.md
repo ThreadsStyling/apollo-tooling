@@ -17,11 +17,11 @@ Apollo CLI brings together your GraphQL clients and servers with tools for valid
 
 <!-- usage -->
 ```sh-session
-$ npm install -g apollo
+$ npm install -g @threads/apollo
 $ apollo COMMAND
 running command...
 $ apollo (-v|--version|version)
-apollo/2.10.3 darwin-x64 node-v11.14.0
+@threads/apollo/2.10.4 darwin-x64 node-v10.15.3
 $ apollo --help [COMMAND]
 USAGE
   $ apollo COMMAND
@@ -33,7 +33,7 @@ USAGE
 
 <!-- commands -->
 * [`apollo client:check`](#apollo-clientcheck)
-* [`apollo client:codegen [OUTPUT]`](#apollo-clientcodegen-output)
+* [`apollo client:codegen [OUTPUT] [ENUMS]`](#apollo-clientcodegen-output-enums)
 * [`apollo client:download-schema OUTPUT`](#apollo-clientdownload-schema-output)
 * [`apollo client:extract OUTPUT`](#apollo-clientextract-output)
 * [`apollo client:push`](#apollo-clientpush)
@@ -87,13 +87,13 @@ OPTIONS
 
 _See code: [src/commands/client/check.ts](https://github.com/apollographql/apollo-tooling/blob/master/packages/apollo/src/commands/client/check.ts)_
 
-## `apollo client:codegen [OUTPUT]`
+## `apollo client:codegen [OUTPUT] [ENUMS]`
 
 Generate static types for GraphQL queries. Can use the published schema in Apollo Engine or a downloaded schema.
 
 ```
 USAGE
-  $ apollo client:codegen [OUTPUT]
+  $ apollo client:codegen [OUTPUT] [ENUMS]
 
 ARGUMENTS
   OUTPUT
@@ -105,6 +105,18 @@ ARGUMENTS
          - all generated types will be written
       - For all other types, this defines a file (absolute or relative to the current working directory) to which all 
       generated types are written.
+
+  ENUMS
+      Tell codegen where to find existing TypeScript enums. e.g.
+
+         --enums '{"MyEnum": "types#MyE"}'
+
+      woulrd result in
+
+         export {MyE as MyEnum} from 'types';
+
+      instead of generating a "MyEnum" type from the GraphQL schema. This is useful because TypeScript treates identical 
+      enums as different types.
 
 OPTIONS
   -c, --config=config                        Path to your Apollo config file
