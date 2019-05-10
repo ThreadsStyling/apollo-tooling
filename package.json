@@ -39,12 +39,12 @@
   },
   "dependencies": {
     "@apollographql/apollo-tools": "file:packages/apollo-tools",
+    "@threads/apollo-codegen-typescript": "file:packages/apollo-codegen-typescript",
     "apollo": "file:packages/apollo",
     "apollo-codegen-core": "file:packages/apollo-codegen-core",
     "apollo-codegen-flow": "file:packages/apollo-codegen-flow",
     "apollo-codegen-scala": "file:packages/apollo-codegen-scala",
     "apollo-codegen-swift": "file:packages/apollo-codegen-swift",
-    "apollo-codegen-typescript": "file:packages/apollo-codegen-typescript",
     "apollo-env": "file:packages/apollo-env",
     "apollo-graphql": "file:packages/apollo-graphql",
     "apollo-language-server": "file:packages/apollo-language-server",

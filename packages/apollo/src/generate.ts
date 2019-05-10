@@ -20,12 +20,12 @@ import { generateSource as generateFlowSource } from "apollo-codegen-flow";
 import {
   generateLocalSource as generateTypescriptLocalSource,
   generateGlobalSource as generateTypescriptGlobalSource
-} from "apollo-codegen-typescript";
+} from "@threads/apollo-codegen-typescript";
 import { generateSource as generateScalaSource } from "apollo-codegen-scala";
 
-import { FlowCompilerOptions } from "../../apollo-codegen-flow/lib/language";
+import { FlowCompilerOptions } from "apollo-codegen-flow/lib/language";
 import { validateQueryDocument } from "apollo-language-server/lib/errors/validation";
-import { TypescriptCompilerOptions } from "../../apollo-codegen-typescript/lib/language";
+import { TypescriptCompilerOptions } from "@threads/apollo-codegen-typescript/lib/language";
 
 export type TargetType =
   | "json"
